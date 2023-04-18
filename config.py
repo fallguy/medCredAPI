@@ -5,7 +5,7 @@ class Config(object):
     TESTING = False
     CSRF_ENABLED = True
     SECRET_KEY = 'da0a688d2888bdae4517404e23be4c99'
-    SQLALCHEMY_DATABASE_URI = os.environ.get('postgresql://brianmporter:medCredPassword@localhost/medCredDB')
+    SQLALCHEMY_DATABASE_URI = 'postgresql://brianmporter:medCredPassword@localhost/medCredDB' # removed "os.environ.get()"
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
 class ProductionConfig(Config):

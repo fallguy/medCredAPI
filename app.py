@@ -24,37 +24,42 @@ def index():
 
 @app.route('/loan/estimate', methods=['POST'])
 def get_loan_estimate():
-    credit_score = request.json.get('credit_score')
-    annual_income = request.json.get('annual_income')
-    max_monthly_payment = request.json.get('max_monthly_payment')
+    # credit_score = request.json.get('credit_score')
+    # annual_income = request.json.get('annual_income')
+    # max_monthly_payment = request.json.get('max_monthly_payment')
     # Calculate the loan estimate based on the inputs
     # ...
+    pass
 
 @app.route('/loan/application', methods=['POST'])
 def apply_for_loan():
-    user_id = request.json.get('user_id')
-    physician_id = request.json.get('physician_id')
-    procedure_date = request.json.get('procedure_date')
-    down_payment = request.json.get('down_payment')
-    monthly_payment = request.json.get('monthly_payment')
-    apr = request.json.get('apr')
+    # user_id = request.json.get('user_id')
+    # physician_id = request.json.get('physician_id')
+    # procedure_date = request.json.get('procedure_date')
+    # down_payment = request.json.get('down_payment')
+    # monthly_payment = request.json.get('monthly_payment')
+    # apr = request.json.get('apr')
     # Create a new loan application in the database
     # ...
+    pass
 
 @app.route('/loan/application/<int:loan_id>', methods=['GET'])
 def get_loan_application_status(loan_id):
     # Get the loan application status from the database
     # ...
+    pass
 
 @app.route('/loan/status/<int:loan_id>', methods=['GET'])
 def get_loan_status(loan_id):
     # Get the loan status from the database
     # ...
+    pass
 
 @app.route('/loan/details/<int:loan_id>', methods=['GET'])
 def get_loan_details(loan_id):
     # Get the loan details from the database
     # ...
+    pass
 
 if __name__ == '__main__':
     app.run()
