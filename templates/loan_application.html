@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Apply for Loan</title>
+  </head>
+  <body>
+    <h1>Apply for Loan</h1>
+    <form method="POST">
+      <label for="user_id">User:</label>
+      <select name="user_id" id="user_id">
+        {% for user in users %}
+          <option value="{{ user.id }}">{{ user.name }}</option>
+        {% endfor %}
+      </select>
+      <br>
+      <label for="physician_id">Physician:</label>
+      <select name="physician_id" id="physician_id">
+        {% for physician in physicians %}
+          <option value="{{ physician.id }}">{{ physician.name }}</option>
+        {% endfor %}
+      </select>
+      <br>
+      <label for="procedure_date">Procedure Date:</label>
+      <input type="date" name="procedure_date" id="procedure_date">
+      <br>
+      <label for="down_payment">Down Payment:</label>
+      <input type="number"

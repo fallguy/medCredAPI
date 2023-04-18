@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Loan Service API</title>
+  </head>
+  <body>
+    <h1>Loan Service API</h1>
+    <h2>Get Loan Estimate</h2>
+    <form action="{{ url_for('get_loan_estimate') }}" method="POST">
+      <label for="credit_score">Credit Score:</label>
+      <input type="text" id="credit_score" name="credit_score"><br><br>
+      <label for="annual_income">Annual Income:</label>
+      <input type="text" id="annual_income" name="annual_income"><br><br>
+      <label for="max_monthly_payment">Maximum Monthly Payment:</label>
+      <input type="text" id="max_monthly_payment" name="max_monthly_payment"><br><br>
+      <input type="submit" value="Submit">
+    </form>
+  </body>
+</html>
