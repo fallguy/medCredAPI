@@ -20,7 +20,7 @@ from models import User, Physician, Loan
 # Define the API endpoints
 @app.route('/')
 def index():
-    return 'Welcome to the Loan Service API!'
+    return render_template('home.html')
 
 @app.route('/loan/estimate', methods=['POST'])
 def get_loan_estimate():
@@ -68,12 +68,12 @@ def get_loan_details(loan_id):
     pass
 
 # renders the get_loan_estimate.html template when the user visits the /gui/loan/estimate URL
-@app.route('/gui/loan/estimate')
+@app.route('/loan/estimate')
 def get_loan_estimate_gui():
     return render_template('get_loan_estimate.html')
 
 # renders the loan_application.html template when the user visits the /gui/loan/apply URL
-@app.route('/gui/loan/apply')
+@app.route('/loan/apply')
 def apply_for_loan_gui():
     return render_template('loan_application.html')
 
